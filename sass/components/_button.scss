@@ -1,0 +1,40 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  padding: 1.8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  &-checkbox {
+    border: 1px solid $color-light-very-light-grayish-blue;
+    border-radius: 50%;
+    padding: 1.2rem;
+
+    &-dark {
+      border: 1px solid $color-dark-extra-dark-grayish-blue;
+    }
+
+    &:hover {
+      border: 1px solid $color-gradient-blue;
+    }
+  }
+  &-close {
+    background-image: url(../../images/icon-cross.svg);
+    opacity: 0;
+
+    &-dark {
+      filter: invert(50%);
+    }
+  }
+  &-completed {
+    background: url(../../images/icon-check.svg),
+      linear-gradient(
+        135deg,
+        $color-gradient-blue 0%,
+        $color-gradient-purple 100%
+      );
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

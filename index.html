@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- A small hack that enables the use of touch events on mobiles/ ipads using the jQuery UI user interface library. 
+    Source: https://github.com/furf/jquery-ui-touch-punch &
+    https://cdnjs.com/libraries/jqueryui-touch-punch
+    https://jqueryui.com/sortable/
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>Todo app</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1 class="header__title">To do</h1>
+        <button class="header__toggle-button btn btn-light-theme"></button>
+      </header>
+      <section class="section-to-do">
+        <div class="section-to-do__new section-to-do__items">
+          <button class="btn btn-checkbox"></button>
+          <input
+            type="text"
+            placeholder="Create a new todo..."
+            class="section-to-do__items-textbox new_to-do"
+          />
+        </div>
+        <ul id="sortable" class="section-to-do__list">
+          <li class="section-to-do__metrics drag-disabled">
+            <div class="section-to-do__metrics-items-left">
+              <span class="items-left"></span> items left
+            </div>
+            <nav class="section-to-do__metrics-nav">
+              <ul class="section-to-do__metrics-nav-list">
+                <li class="btn-all active" tabindex="0">All</li>
+                <li class="btn-active" tabindex="0">Active</li>
+                <li class="btn-comp" tabindex="0">Completed</li>
+              </ul>
+            </nav>
+            <div class="section-to-do__metrics-clear-btn" tabindex="0">
+              Clear Completed
+            </div>
+          </li>
+        </ul>
+        <div class="section-to-do__instructions">
+          Drag and drop to reorder list
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/sree-lakshmi-n"
+        >Sreelakshmi N.</a
+      >.
+    </div>
+  </body>
+</html>

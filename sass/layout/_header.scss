@@ -1,0 +1,20 @@
+.header {
+  padding-top: 7.2rem;
+  display: flex;
+  justify-content: space-between;
+  min-height: 12rem;
+  margin-bottom: 6.4rem;
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    color: $color-light-very-light-gray;
+  }
+  &__toggle-button {
+    align-self: flex-end;
+    background-image: url(../../images/icon-moon.svg);
+  }
+  &-toggle-button-dark {
+    background-image: url(../../images/icon-sun.svg);
+  }
+}
